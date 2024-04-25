@@ -1,4 +1,4 @@
-
+import java.util.Scanner;
 
 public class ContaTerminal {
 
@@ -7,13 +7,46 @@ public class ContaTerminal {
 
    
         
-       
-        //TODO: Exibir as mensagens para o nosso usuário.
+        Integer numero;
+    
+        String agencia;
+        
+        String nomeCliente;
+    
+        Double saldo;
 
-        //TODO: Obter pela classe Scanner os valores digitados no terminal
+        Scanner scan = new Scanner(System.in);
+        
 
-        //TODO: Exibir a mensagem a mensagem da conta criada.
+        System.out.println();
+        System.out.println();
 
-        System.out.println("Hello, World!");
+        System.out.println("Por favor, digite o número da agência!: ");
+
+        numero = scan.nextInt();
+
+        System.out.println("Por favor, digite o nome da agência!: ");
+
+        agencia = scan.next();
+
+        System.out.println("Por favor, digite o nome do cliente!: ");
+
+        nomeCliente = scan.next();
+
+        System.out.println("Por favor, digite o saldo da conta!: ");
+
+        saldo = scan.nextDouble();
+
+        Conta conta = new Conta(numero,agencia,nomeCliente, saldo);
+
+        scan.close();
+
+        conta.Sucesso();
+        
+        
+
+  
+
+    
     }
 }
